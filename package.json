@@ -1,0 +1,17 @@
+{
+  "name": "mod1airports",
+  "version": "1.0.0",
+  "description": "Use this package.json to start your assignment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "gemmiedodger",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "swagger-jsdoc": "^6.0.1",
+    "swagger-ui-express": "^4.1.6",
+    "yamljs": "^0.3.0"
+  }
+}
