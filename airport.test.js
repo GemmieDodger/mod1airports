@@ -32,7 +32,7 @@ describe("connect to airport server", () => {
         //"icao":"00AK"
         request(app)
         .put('/airports/00AK')
-        .send({name : 'Gemma'})
+        .send({'name' : 'Gemma'})
         .set('Accept', 'application/json')
         .expect(200)
         .expect(res => {

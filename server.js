@@ -9,6 +9,8 @@ const swaggerDocs = require('swagger-jsdoc')({
     swaggerDefinition: docs,
     apis: ['./server.js', './Airport.js']
 })
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 
 //patch a single airport
 
@@ -153,7 +155,7 @@ app.delete('/airports/:icao', (req, res) => {
 /**
  * @swagger 
 *  /airports/:icao:
-*    patch:
+*    put:
 *      summary: Update an airport
 *      requestBody:
 *        required: true
@@ -200,15 +202,12 @@ app.put('/airports/:icao', (req, res) => {
         console.log(j)
         if(airport.hasOwnProperty(j)) {
             airport[j] = updates[j]
-            console.log("own property")
-            console.log(airport[j])
-            console.log(updates[j])
         }
     }
     if(index === '') {
         res.sendStatus(404) 
     } else {
-        res.sendStatus(200) 
+        console.log(airport)
         res.send(airport);
     }
   });
