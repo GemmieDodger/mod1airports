@@ -4,7 +4,8 @@
   "description": "Use this package.json to start your assignment",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node main.js",
+    "test": "jest"
   },
   "author": "gemmiedodger",
   "license": "ISC",
@@ -13,5 +14,9 @@
     "swagger-jsdoc": "^6.0.1",
     "swagger-ui-express": "^4.1.6",
     "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "supertest": "^6.1.1"
   }
 }
